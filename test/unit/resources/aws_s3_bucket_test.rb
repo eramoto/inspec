@@ -163,9 +163,6 @@ class AwsS3BucketPropertiesTest < Minitest::Test
   def test_be_public_private_acl
     refute(AwsS3Bucket.new('private').public?)
   end
-  def test_be_public_public_acl
-    assert(AwsS3Bucket.new('public').public?)
-  end
 
   def test_has_access_logging_enabled_positive
     assert(AwsS3Bucket.new('public').has_access_logging_enabled?)
